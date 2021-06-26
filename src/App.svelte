@@ -17,24 +17,21 @@
   {#each sectionTabs as tab}
     {#if tab == activeTab}
       <H1>{tab}</H1>
-      {#if tab == "About"}
-        <About />
-      {:else if tab == "Skills"}
+        {#if tab == "Skills"}
         <Skills />
-      {:else if tab == "Projects"}
-        <Projects />
-      {/if}
+
+        {:else if tab == "About"}
+        <About />
+        {:else if tab == "Projects"}
+          <Projects />
+        {/if}
     {/if}
   {/each}
 </main>
 
 <style lang="scss">
-  // .flexrow__ {
-  //   display: flex;
-  //   flex-direction: row;
-  //   max-width: 300px !important;
-  //   flex-wrap: nowrap;
-  //   & label {
-  //   }
-  // }
+  :global(section) {
+    width: 100%;
+    height: 100vh;
+  }
 </style>

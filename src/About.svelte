@@ -1,24 +1,42 @@
 <script>
-	import { GithubIcon,LinkedinIcon } from "svelte-feather-icons"
+  import { GithubIcon, LinkedinIcon } from "svelte-feather-icons";
 
-	import {Subhead,Headline, Card, Divider, Button } from "attractions";
-	import GetLinkedProfile from "./utils/getLinkedProfile"
-import { svg_element } from "svelte/internal";
-	let profile = GetLinkedProfile("yonahaviv")
+  import { Subhead, Headline, Card, Divider, Button } from "attractions";
+  import GetLinkedProfile from "./utils/getLinkedProfile";
+  let profile = GetLinkedProfile("yonahaviv");
+  let logoColors = {
+	  default: "darkgray",
+	  github: {default:"black"},
+	  linkedin: {default:"blue"}
+  }
 </script>
 
-<Headline>{profile.name}</Headline>
-<Subhead>{profile.headline}</Subhead>
-<Divider text="Summary"/>
-<Card>{profile.summary}</Card>
-
-<Button round neutral><GithubIcon class="ico-gh" size="20" /></Button>
-<Button round neutral><LinkedinIcon size="20" /></Button>
-
+  <!--Name-->
+  <Headline>{profile.name}</Headline>
+  <!--Headline-->
+  <Subhead>{profile.headline}</Subhead>
+  <!--About me-->
+  <Divider text="Summary" />
+  <Card class="summary__"
+    >{profile.summary}
+  </Card>
+  <div class="socials__">
+	<!-- <Button background="red" round neutral ><GithubIcon size="20" /></Button> -->
+	<Button round neutral><LinkedinIcon size="20" /></Button>
+  </div>
 
 
 <style lang="scss">
-	.ico-gh p {
-	fill: red
-	}
+
+//   .summary__ {
+//     width: 40vw;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+
+//   .socials__ {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//   }
 </style>
