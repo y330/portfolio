@@ -1,0 +1,29 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./scripts/serve.js"
+  },
+  "browserslist": "> .1% or last 4 versions",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "attractions": "^3.3.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "3.0.0",
+    "postcss": "8.3.5",
+    "sass": "^1.35.1",
+    "svelte": "^3.38.3",
+    "svelte-feather-icons": "^3.5.0",
+    "svelte-loader": "^3.1.2",
+    "svelte-preprocess": "^4.7.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "scrapedin": "^1.0.21"
+  }
+}
