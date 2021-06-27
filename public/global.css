@@ -1,3 +1,4 @@
+@import "scrollbar.css";
 html,
 body {
 	position: relative;
@@ -72,34 +73,5 @@ button:focus {
 /*----------------*/
 
 /*_____Labels_____*/
-label.tag__ {
-	display: inline-block !important;
-}
-label.tab {
-	flex-direction: column-reverse;
-	/* align-self: center; */
-}
 
 /*____Scrollbar____*/
-::-webkit-scrollbar {
-	width: 7px;
-}
-::-webkit-scrollbar-button {
-	background-color: #444857;
-	height: 0.5em;
-}
-::-webkit-scrollbar-corner {
-	background-color: #aaa;
-}
-::-webkit-scrollbar-thumb {
-	background-color: #aaa;
-	opacity: 1;
-	transition: background-color 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-	border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-	background-color: #999;
-}
-::-webkit-scrollbar-thumb:active {
-	background-color: #7e7e7e;
-}
