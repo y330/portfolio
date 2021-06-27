@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 @import "scrollbar.css";
+=======
+@import "./scrollbar.css";
+>>>>>>> 7c3862b28022589c289b136a94db7b2d4a0fa94c
 html,
 body {
 	position: relative;
-	width: 100%;
+	/* width: 100%; */
 	height: 100%;
+
+	/* margin-inline-end: 3px; */
 }
 
 body {
 	color: #333;
-	margin: 0;
+	/* background-color: #333; */
+	margin: 0 2px;
 	padding: 8px;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
@@ -73,5 +80,66 @@ button:focus {
 /*----------------*/
 
 /*_____Labels_____*/
+<<<<<<< HEAD
 
 /*____Scrollbar____*/
+=======
+label.tag__ {
+	display: inline-block !important;
+}
+
+/*____Navbar_____*/
+/* .dark-mode .navbar,
+.navbar {
+	background-image: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.navbar {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	width: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .navbar {
+	background-color: #111417;
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar,
+.navbar.navbar-fixed-bottom {
+	height: 5rem;
+}
+
+.dark-mode .navbar.navbar-fixed-bottom,
+.dark-mode .navbar.navbar-static-bottom {
+	border-color: rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.navbar.navbar-fixed-bottom,
+.navbar.navbar-static-bottom {
+	border-bottom: none;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+} */
+>>>>>>> 7c3862b28022589c289b136a94db7b2d4a0fa94c
