@@ -9,18 +9,19 @@
   // Stores
   import { activeTab } from "./utils/stores.js";
 
-  let sections = ["About", "Projects"];
+  let sections = ["About", "Skills", "Projects"];
 </script>
-
 <Header tabs={sections} />
 
 <main>
+
   {#each sections as tab}
     {#if tab == $activeTab}
       <H1>{tab}</H1>
-
       {#if tab == "About"}
-        <About><Skills /></About>
+        <About />
+      {:else if tab == "Skills"}
+        <Skills />
       {:else if tab == "Projects"}
         <Projects />
       {/if}
@@ -29,10 +30,8 @@
 </main>
 
 <style lang="scss">
-
   main {
-    margin-inline: 0 !important;
-    padding-inline: 1%;
+    padding: 0 8px;
   }
   // .flexrow__ {
   //   display: flex;
