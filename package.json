@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./scripts/serve.js"
+    "start": "node ./scripts/serve.js",
+    "build": "webpack"
   },
   "browserslist": "> .1% or last 4 versions",
   "devDependencies": {
