@@ -3,7 +3,7 @@
 // async function getLinkedProfile(user) {
 //   const options = {
 //     email: "avivyonah@gmail.com",
-//     password: "Two-housand-&-fiur",
+//     password: "0a5f5da61dcbb3d1b2addcbdd33ba24d9d12fe48ed00749f3b420bd45b79819e",
 //   };
 //   const profileScraper = await scrapedin(options);
 //   const profile = await profileScraper(`https://www.linkedin.com/in/${user}/`);
