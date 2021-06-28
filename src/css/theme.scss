@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 @forward "~attractions/_variables" with ($main: red, $card-radius: 2em);
-=======
-@import "./atoms/scrollbar.css";
-@forward "~attractions/_variables" with ($main: red, $card-radius: 2em);
-
->>>>>>> 7c3862b28022589c289b136a94db7b2d4a0fa94c
 // /*____Scrollbar____*/
 // ::-webkit-scrollbar {
 //   width: 7px;

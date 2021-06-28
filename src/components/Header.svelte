@@ -1,5 +1,5 @@
 <script>
-  import { GithubIcon } from "svelte-feather-icons";
+  import { GithubIcon, LinkedinIcon } from "svelte-feather-icons";
   // Components
   import { Tabs, Divider, Button } from "attractions";
   // Stores
@@ -8,35 +8,89 @@
   export let tabs;
 </script>
 
-<Divider />
-<section>
-  <container>
-    <Tabs
-      class="tabs__"
-      tabClass="tab__"
-      name="navigation"
-      items={tabs}
-      bind:value={$activeTab}
-    />
-  </container>
+<section class="scroll__">
+  <Tabs
+    class="tabs__"
+    tabClass="tab__"
+    name="navigation"
+    items={tabs}
+    bind:value={$activeTab}
+  />
   <!-- <Divider /> -->
-  <Button round neutral class="btn__"><GithubIcon size="30" /></Button>
+  <row>
+    <Button
+      href="https://github.com/y330"
+      title="Yonah Aviv on GitHub"
+      neutral
+      round
+      class="github"><GithubIcon size="20" strokeWidth="2" /></Button
+    >
+    <Button
+      href="https://linkedin.com/in/yonahaviv"
+      round
+      class="linkedin"
+      title="Yonah Aviv on Linkedin"
+      neutral><LinkedinIcon size="20" strokeWidth="1.8" /></Button
+    >
+  </row>
 </section>
-<Divider />
 
 <style lang="scss">
   @import "../css/theme";
+  $background-secondary: lightgrey;
 
   section {
-    background-color: whitesmoke;
+    background-color: $background-secondary;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    align-content: center;
+    overflow-x: visible;
+    align-items: baseline;
     justify-content: space-between;
-    height: fit-content;
-    &.btn__ {
+    // height: 5%;
+    width: 99vw;
+    & row {
+      display: flex;
+      flex-direction: row;
       vertical-align: middle;
+      justify-content: space-between;
+      margin-right: 1em;
+      padding: 0.5em 0em;
+
+      & :global(.btn.github) {
+        margin-right: 0.25em;
+        border: 0.125em solid;
+        transition: all 300ms ease-in;
+
+        & :global(svg) {
+          transition: all 300ms ease-in;
+          fill: #333;
+        }
+        &:hover {
+          border: 0.125em #333 solid;
+
+          background-color: #333;
+          & :global(svg) {
+            stroke: white;
+          }
+        }
+      }
+      & :global(.btn.linkedin) {
+        transition: all 300ms ease-in;
+        border: 0.125em solid;
+        & :global(svg) {
+          transition: all 300ms ease-in;
+          fill: #333;
+        }
+        &:hover {
+          background-color:cornflowerblue;
+          border-color: cornflowerblue;
+          & :global(svg) {
+            stroke: white;
+            fill: white;
+          }
+        }
+      }
     }
   }
 
@@ -44,15 +98,21 @@
     display: flex !important;
     justify-content: space-evenly !important;
     width: 60vw;
-    height: auto;
+    min-width: 10em;
+    // justify-self: end;
 
     & :global(.tab__) {
+      //   width: 100%;
+
       flex-grow: 10;
       & :global(div) {
+        // background-color: darkgray;
+
         justify-content: center;
         width: 100%;
       }
       & :global(input:hover) {
+        background-color: purple;
       }
     }
   }

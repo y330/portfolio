@@ -11,9 +11,9 @@
 
   let sections = ["About", "Skills", "Projects"];
 </script>
+<Header tabs={sections} />
 
 <main>
-  <Header tabs={sections} />
 
   {#each sections as tab}
     {#if tab == $activeTab}
@@ -30,6 +30,9 @@
 </main>
 
 <style lang="scss">
+  main {
+    padding: 0 8px;
+  }
   // .flexrow__ {
   //   display: flex;
   //   flex-direction: row;

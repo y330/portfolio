@@ -21,11 +21,7 @@
 {/each}
 
 <style lang="scss">
-
-<<<<<<< HEAD
-:global(.tag__) {
-	display: inline-block !important;
-}
-=======
->>>>>>> 7c3862b28022589c289b136a94db7b2d4a0fa94c
+  :global(.tag__) {
+    display: inline-block !important;
+  }
 </style>
