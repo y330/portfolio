@@ -15,7 +15,7 @@ body {
 	padding: 8px 0;
 	box-sizing: border-box;
 	font-family: "Noto sans", sans-serif;
-	overflow-y: scroll;
+	overflow: scroll;
 }
 h1,
 h2,
@@ -81,6 +81,27 @@ button:focus {
 /*----------------*/
 /*-----Added------*/
 /*----------------*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+	row {
+		flex-wrap: wrap !important;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 882px) {
+	row {
+		flex-wrap: wrap !important;
+	}
+
+	/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) {
+		row {
+			flex-wrap: nowrap !important;
+		}
+	}
+}
 
 /*_____Labels_____*/
 
