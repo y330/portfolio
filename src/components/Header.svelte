@@ -67,12 +67,19 @@
           fill: #333;
         }
         &:hover {
-          border: 0.125em #333 solid;
+          border-color: black;
 
-          background-color: #333;
+          background-color: black;
           & :global(svg) {
             stroke: white;
+            fill: white;
           }
+        }
+        &:active {
+          opacity: 0.7;
+        }
+        &:focus {
+          opacity: 0.9;
         }
       }
       & :global(.btn.linkedin) {
@@ -83,12 +90,18 @@
           fill: #333;
         }
         &:hover {
-          background-color:cornflowerblue;
-          border-color: cornflowerblue;
+          background-color: #0a66c2;
+          border-color: #0a66c2;
           & :global(svg) {
             stroke: white;
             fill: white;
           }
+        }
+        &:active {
+          opacity: 0.7;
+        }
+        &:focus {
+          opacity: 0.9;
         }
       }
     }
