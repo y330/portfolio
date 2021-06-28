@@ -23,14 +23,14 @@
       title="Yonah Aviv on GitHub"
       neutral
       round
-      class="github"><GithubIcon size="20" strokeWidth="2" /></Button
+      class="github"><GithubIcon size="16" strokeWidth="2" /></Button
     >
     <Button
       href="https://linkedin.com/in/yonahaviv"
       round
       class="linkedin"
       title="Yonah Aviv on Linkedin"
-      neutral><LinkedinIcon size="20" strokeWidth="1.8" /></Button
+      neutral><LinkedinIcon size="16" strokeWidth="1.8" /></Button
     >
   </row>
 </section>
@@ -47,16 +47,16 @@
     overflow-x: visible;
     align-items: baseline;
     justify-content: space-between;
-    // height: 5%;
-    width: 99vw;
+    // height: calc(fit-content - 3/px);
+    // width: w;
     & row {
       display: flex;
       flex-direction: row;
       vertical-align: middle;
       justify-content: space-between;
-      margin-right: 1em;
-      padding: 0.5em 0em;
-
+      & :global(.btn) {
+        padding: 0.25em;
+      }
       & :global(.btn.github) {
         margin-right: 0.25em;
         border: 0.125em solid;
@@ -112,6 +112,7 @@
     justify-content: space-evenly !important;
     width: 60vw;
     min-width: 10em;
+
     // justify-self: end;
 
     & :global(.tab__) {
@@ -120,12 +121,10 @@
       flex-grow: 10;
       & :global(div) {
         // background-color: darkgray;
-
+        border-color: darkblue;
         justify-content: center;
         width: 100%;
-      }
-      & :global(input:hover) {
-        background-color: purple;
+        border-bottom-width: 3px !important;
       }
     }
   }
