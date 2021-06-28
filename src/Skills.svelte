@@ -1,5 +1,5 @@
 <script>
-  import { RadioChip } from "attractions";
+  import { RadioChip, Divider } from "attractions";
   let skills = [
     { value: "Python (Programming Language)", label: "py" },
     { value: "JavaScript", label: "js" },
@@ -16,9 +16,11 @@
   ];
 </script>
 
-{#each skills as skill}
-  <RadioChip class="tag__" value={skill.value} name={skill.label} />
-{/each}
+<section>
+  {#each skills as skill}
+    <RadioChip class="tag__" value={skill.value} name={skill.label} />
+  {/each}
+</section>
 
 <style lang="scss">
   :global(.tag__) {

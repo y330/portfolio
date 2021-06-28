@@ -1,7 +1,7 @@
 <script>
   import { GithubIcon, LinkedinIcon } from "svelte-feather-icons";
   // Components
-  import { Tabs, Divider, Button } from "attractions";
+  import { Tabs, Divider, Button, Label, Subhead } from "attractions";
   // Stores
   import { activeTab } from "../utils/stores.js";
 
@@ -17,13 +17,18 @@
     bind:value={$activeTab}
   />
   <!-- <Divider /> -->
+
   <row>
+    <Label>@</Label>
+
     <Button
       href="https://github.com/y330"
       title="Yonah Aviv on GitHub"
       neutral
       round
-      class="github"><GithubIcon size="20" strokeWidth="2" /></Button
+      class="github"
+    >
+      <GithubIcon size="20" strokeWidth="2" /></Button
     >
     <Button
       href="https://linkedin.com/in/yonahaviv"
@@ -37,72 +42,84 @@
 
 <style lang="scss">
   @import "../css/theme";
-  $background-secondary: lightgrey;
-
+  $background-secondary: whitesmoke;
+  :root {
+    width: 100%;
+  }
   section {
+    border-bottom: 4px grey solid;
+    padding: 5px 2px !important;
+    border-radius: 8px;
+    transition: border 300ms ease;
+    border-bottom-width: 1px !important;
     background-color: $background-secondary;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    // overflow-x: visible;
+    // align-items: baseline;
+    justify-content: space-between;
+    // height: calc(fit-content - 3/px);
+    &:hover {
+      border-color: $main;
+    }
+  }
+  row {
+    flex-wrap: nowrap !important;
+  }
+  :global(row) {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    overflow-x: visible;
-    align-items: baseline;
-    justify-content: space-between;
-    // height: 5%;
-    width: 99vw;
-    & row {
-      display: flex;
-      flex-direction: row;
-      vertical-align: middle;
-      justify-content: space-between;
-      margin-right: 1em;
-      padding: 0.5em 0em;
+    justify-content: space-around;
 
-      & :global(.btn.github) {
-        margin-right: 0.25em;
-        border: 0.125em solid;
+    & :global(.btn) {
+      padding: 0.25em;
+      display: flex;
+      justify-content: center;
+      flex-flow: row-reverse;
+      transition: 300ms ease-out;
+      width: 17px;
+      border: 0.125em $main solid;
+
+      & :global(svg) {
         transition: all 300ms ease-in;
+        fill: $main;
+        stroke: $main;
+        border-color: $main;
+      }
+
+      &:hover {
+        width: 70px;
+        float: right;
+        padding: 0.5em;
+        color: white !important;
 
         & :global(svg) {
-          transition: all 300ms ease-in;
-          fill: #333;
-        }
-        &:hover {
-          border-color: black;
-
-          background-color: black;
-          & :global(svg) {
-            stroke: white;
-            fill: white;
-          }
-        }
-        &:active {
-          opacity: 0.7;
-        }
-        &:focus {
-          opacity: 0.9;
+          stroke: white;
+          fill: white;
         }
       }
-      & :global(.btn.linkedin) {
-        transition: all 300ms ease-in;
-        border: 0.125em solid;
-        & :global(svg) {
-          transition: all 300ms ease-in;
-          fill: #333;
-        }
-        &:hover {
-          background-color: #0a66c2;
-          border-color: #0a66c2;
-          & :global(svg) {
-            stroke: white;
-            fill: white;
-          }
-        }
-        &:active {
-          opacity: 0.7;
-        }
-        &:focus {
-          opacity: 0.9;
-        }
+      &:active {
+        opacity: 0.7;
+      }
+      &:focus {
+        opacity: 0.9;
+      }
+    }
+    & :global(.btn.github) {
+      margin-right: 0.25em;
+
+      &:hover {
+        border-color: black;
+
+        background-color: black !important;
+      }
+    }
+    & :global(.btn.linkedin) {
+      &:hover {
+        background-color: #0a66c2 !important;
+        border-color: #0a66c2;
       }
     }
   }
@@ -112,6 +129,7 @@
     justify-content: space-evenly !important;
     width: 60vw;
     min-width: 10em;
+
     // justify-self: end;
 
     & :global(.tab__) {
@@ -120,12 +138,10 @@
       flex-grow: 10;
       & :global(div) {
         // background-color: darkgray;
-
+        border-color: darkblue;
         justify-content: center;
         width: 100%;
-      }
-      & :global(input:hover) {
-        background-color: purple;
+        border-bottom-width: 3px !important;
       }
     }
   }
