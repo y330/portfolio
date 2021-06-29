@@ -1,17 +1,71 @@
-# mfe-svelte-attractions
+*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
-Demo app to show the integration of attractions into a svelte app using webpack.
+---
 
-## start
+# svelte app
+
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+
+To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+
+```bash
+npx degit sveltejs/template svelte-app
+cd svelte-app
 ```
+
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+
+
+## Get started
+
+Install the dependencies...
+
+```bash
+cd svelte-app
 npm install
-npm start
 ```
 
-## problem
-'theme.scss' located in /src/css is not respected although the configuration in /ci/svelte.config.js seems ok.
+...then start [Rollup](https://rollupjs.org):
 
-1. the border should have a radius of 2em instead of 1.25em
-2. the border color should be green
+```bash
+npm run dev
+```
 
- 
+Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+
+By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+
+
+## Deploying to the web
+
+### With [now](https://zeit.co/now)
+
+Install `now` if you haven't already:
+
+```bash
+npm install -g now
+```
+
+Then, from within your project folder:
+
+```bash
+cd public
+now
+```
+
+As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
+
+### With [surge](https://surge.sh/)
+
+Install `surge` if you haven't already:
+
+```bash
+npm install -g surge
+```
+
+Then, from within your project folder:
+
+```bash
+npm run build
+surge public
+```

@@ -1,7 +1,3 @@
-/node_modules/
-/public/build/
-
 .DS_Store
-/.auth
-/auth
-.vercel
+node_modules
+public/bundle.*
