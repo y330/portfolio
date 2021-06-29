@@ -12,6 +12,7 @@ specifiers:
   scrapedin: ^1.0.21
   svelte: ^3.38.3
   svelte-feather-icons: ^3.5.0
+  svelte-grid: ^5.0.1
   svelte-loader: ^3.1.2
   svelte-preprocess: ^4.7.3
   svelte-typewriter: ^2.4.5
@@ -33,6 +34,7 @@ devDependencies:
   sass: 1.35.1
   svelte: 3.38.3
   svelte-feather-icons: 3.5.0
+  svelte-grid: 5.0.1
   svelte-loader: 3.1.2_svelte@3.38.3
   svelte-preprocess: 4.7.3_014d138c41d068b53bc4b7e2217a0be4
   svelte-typewriter: 2.4.5
@@ -4968,6 +4970,10 @@ packages:
     resolution: {integrity: sha512-AO6vwbI+WH8xouZRIxyenUV2olSAjp0QFgBa4esyS9ZxvBmKkRu9VTfgbMW0F1N7QTOWbMpgaForsnOcFGfXeg==}
     dependencies:
       svelte: 3.38.3
+    dev: true
+
+  /svelte-grid/5.0.1:
+    resolution: {integrity: sha512-NpbRF35xDNOQi+oFJ63pOr99czRA3RPDXuUeJBRa9nWfR1NlDG4B9DhtytB7ksD0jrATLZpziFWyssSHq647YA==}
     dev: true
 
   /svelte-hmr/0.14.4_svelte@3.38.3:
