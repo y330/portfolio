@@ -90,16 +90,15 @@ button:focus {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 882px) {
+@media only screen and (min-width: 768) {
 	row {
-		flex-wrap: wrap !important;
+		flex-wrap: nowrap !important;
 	}
-
-	/* Extra large devices (large laptops and desktops, 1200px and up) */
-	@media only screen and (min-width: 1200px) {
-		row {
-			flex-wrap: nowrap !important;
-		}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	row {
+		flex-wrap: nowrap !important;
 	}
 }
 
