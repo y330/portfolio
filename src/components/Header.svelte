@@ -1,43 +1,40 @@
 <script>
+  // UI
+  import { Button, Label, Subhead } from "attractions";
+  // Library
   import { GithubIcon, LinkedinIcon } from "svelte-feather-icons";
   // Components
-  import { Tabs, Divider, Button, Label, Subhead } from "attractions";
-  // Stores
-  import { activeTab } from "../utils/stores.js";
-
-  export let tabs;
+  import Nav from "./Nav.svelte"
+  // Properties
 </script>
 
 <section class="scroll__">
-  <Tabs
-    class="tabs__"
-    tabClass="tab__"
-    name="navigation"
-    items={tabs}
-    bind:value={$activeTab}
-  />
+  <Nav>
+    <slot></slot>
+    <row>
+      <Label>@</Label>
+
+      <Button
+        href="https://github.com/y330"
+        title="Yonah Aviv on GitHub"
+        neutral
+        round
+        class="github"
+      >
+        <GithubIcon size="20" strokeWidth="2" /></Button
+      >
+      <Button
+        href="https://linkedin.com/in/yonahaviv"
+        round
+        class="linkedin"
+        title="Yonah Aviv on Linkedin"
+        neutral><LinkedinIcon size="20" strokeWidth="1.8" /></Button
+      >
+    </row>
+  </Nav>
   <!-- <Divider /> -->
 
-  <row>
-    <Label>@</Label>
 
-    <Button
-      href="https://github.com/y330"
-      title="Yonah Aviv on GitHub"
-      neutral
-      round
-      class="github"
-    >
-      <GithubIcon size="20" strokeWidth="2" /></Button
-    >
-    <Button
-      href="https://linkedin.com/in/yonahaviv"
-      round
-      class="linkedin"
-      title="Yonah Aviv on Linkedin"
-      neutral><LinkedinIcon size="20" strokeWidth="1.8" /></Button
-    >
-  </row>
 </section>
 
 <style lang="scss">
@@ -47,14 +44,14 @@
     width: 100%;
   }
   section {
-    border-bottom: 4px grey solid;
+    // border-bottom: 4px grey solid;
     padding: 5px 2px !important;
     border-radius: 8px;
     transition: border 300ms ease;
-    border-bottom-width: 1px !important;
+    // border-bottom-width: 1px !important;
     background-color: $background-secondary;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     // overflow-x: visible;
     // align-items: baseline;

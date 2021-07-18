@@ -1,3 +1,3 @@
-import { writable } from "svelte/store";
+// import { writable } from "svelte/store";
 
-export const activeTab = writable("Projects");
+// export let activeTab = writable("About");

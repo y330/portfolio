@@ -26,6 +26,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "scrapedin": "^1.0.21"
+    "scrapedin": "^1.0.21",
+    "svelte-grid": "^5.0.1"
   }
 }

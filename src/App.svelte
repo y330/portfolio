@@ -1,35 +1,59 @@
 <script>
+  // UI
+  import { H1, Tabs } from "attractions";
   // Components
-  import { H1 } from "attractions";
   import Header from "./components/Header.svelte";
+  import Recents from "./components/Recents.svelte";
+  import Skills from "./components/Skills.svelte";
   // Pages
-  import Skills from "./Skills.svelte";
-  import About from "./About.svelte";
-  import Projects from "./Projects.svelte";
+  import About from "./pages/about.page.svelte";
+  import Projects from "./pages/projects.page.svelte";
+  import Experience from "./pages/experience.page.svelte";
   // Stores
-  import { activeTab } from "./utils/stores.js";
+	// import { activeTab } from "./utils/stores.js"
 
-  let sections = ["About", "Projects"];
-</script>
 
-<Header tabs={sections} />
+  const sections = ["About", "Projects", "Work", "Contact"];
+  let activeTab = "About";
+
+
+ </script>
 
 <main>
-  {#each sections as tab}
-    {#if tab == $activeTab}
-      <H1>{tab}</H1>
+  <section>
+    <Header >
+      <Tabs
 
-      {#if tab == "About"}
-        <About><Skills /></About>
-      {:else if tab == "Projects"}
-        <Projects />
+      class="tabs__"
+      tabClass="tab__"
+      name="navigation"
+      items={sections}
+      bind:value={activeTab}
+    />
+    </Header>
+
+    {#each sections as tab}
+
+      {#if tab == activeTab}
+
+        {#if tab == "About"}
+          <About>
+            <span slot="recents"><Recents /></span>
+            <span slot="skills"><Skills /></span>
+          </About>
+          {:else if tab == "Projects"}
+          <Projects></Projects>
+        {:else if tab == "Work"}
+        <Experience></Experience>
+        {:else}
+        <button>Hello WOrld</button>
       {/if}
-    {/if}
-  {/each}
+      {/if}
+    {/each}
+  </section>
 </main>
 
 <style lang="scss">
-
   main {
     margin-inline: 0 !important;
     padding-inline: 1%;
