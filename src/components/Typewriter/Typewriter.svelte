@@ -148,7 +148,7 @@
 
 <div
 	class:cursor
-	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
+	style="--cursor-color: {typeof cursor === 'string' ? cursor : '#ff3e00'}"
 	bind:this={node}
 >
 	<slot />

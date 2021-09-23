@@ -7,14 +7,18 @@
 <Typewriter interval={100} cursor="#ff3e00">
 	<Headline>Resume</Headline>
 </Typewriter>
-<Subhead><em>Drag corners to resize</em></Subhead>
-<iframe
-	src="https://onedrive.live.com/embed?cid=D1BCEE1A2FD48DEE&resid=D1BCEE1A2FD48DEE%213115&authkey=AOaKHaMR46vCr84&em=2"
-	height="288"
-	frameborder="0"
-	style="width: 100vw;"
-	scrolling="no" />
+<section>
+	<Subhead><em>Drag corners to resize</em></Subhead>
+	<iframe
+		src="https://onedrive.live.com/embed?cid=D1BCEE1A2FD48DEE&resid=D1BCEE1A2FD48DEE%213115&authkey=AOaKHaMR46vCr84&em=2"
+		height="800"
+		frameborder="0"
+		width="800"
+		scrolling="no" />
+</section>
 
 <style>
-	/* your styles go here */
+	section {
+		height: fit-content;
+	}
 </style>

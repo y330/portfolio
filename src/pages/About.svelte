@@ -17,9 +17,9 @@
 <container>
 	<Hero />
 	<Summary />
-	<Chips tags={skills} />
 	<section class="row">
 		<!-- <RecentProjects /> -->
+		<Chips tags={skills} />
 		<!-- <Skills /> -->
 	</section>
 </container>

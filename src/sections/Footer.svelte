@@ -5,8 +5,6 @@
 
 	<br />
 
-
-
 	<b
 		><p color="white">Copyright © 2021 Yonah Aviv. All rights reserved.</p>
 	</b>
@@ -17,6 +15,9 @@
 
 	div {
 		padding-top: 1em;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		margin-top: 5em;
 		height: fit-content;
 		background-color: theme.$main;
 		padding-inline: 4vw;

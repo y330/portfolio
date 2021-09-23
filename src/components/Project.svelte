@@ -5,7 +5,7 @@
 	import { tweened } from 'svelte/motion'
 	import { cubicOut } from 'svelte/easing'
 	import Chips from './Chips.svelte'
-
+	import Typewriter from './Typewriter/Typewriter.svelte'
 	// ------- parameters
 	export let project = {
 		title: '',
@@ -47,30 +47,27 @@
 		on:mouseleave={handleMouseLeave}
 		on:touchend={handleMouseLeave}
 		transition:slide={{ delay: randomInt(200, 500) }}
-		style="box-shadow: {$shadow * 10}px {$shadow * 5}px #ff3e00, {$shadow *
-			20}px {$shadow * 10}px rgba(255, 85, 0, 0.55), {$shadow *
-			30}px {$shadow * 15}px rgba(255, 100, 0.6, 0.22);
+		style="box-shadow: {$shadow * 6}px {$shadow * 3}px #ff3e00, {$shadow *
+			10}px {$shadow * 5}px rgba(255, 85, 0, 0.55), {$shadow *
+			14}px {$shadow * 7}px rgba(255, 100, 0.6, 0.22);
 ;"
 		class="site dark-mode scroll__ card">
-		<h2
-			class="title"
-			on:load={(e) => typewriter(e)}
-			transition:fade={{ delay: randomInt(250, 500) }}>
-			<a href={project.url}>{project.title}<br /></a>
-		</h2>
+		<Typewriter interval={100}>
+			<h2 class="title" transition:fade={{ delay: randomInt(250, 500) }}>
+				{project.title}
+			</h2>
+		</Typewriter>
 		<div
 			class="description"
 			transition:fade={{ delay: randomInt(250, 1000) }}>
-			{project.description}
+			<Typewriter interval={1} delay={3000}>
+				{project.description}
+			</Typewriter>
+
 			<img src={project.imageUrl} alt="A screenshot of {project.title}" />
 		</div>
-		<div class="code">
-			<div class="technologies">
-				<Chips tags={project.technologies} />
-			</div>
-			<!-- {#if project.code != ''}Source: <a href={project.code}
-					>{project.code}</a
-				>{/if} -->
+		<div class="technologies">
+			<Chips tags={project.technologies} />
 		</div>
 	</div>
 {/if}

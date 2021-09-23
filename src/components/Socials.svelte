@@ -1,7 +1,22 @@
 <script>
 	// Components
 	import { GithubIcon, LinkedinIcon } from 'svelte-feather-icons'
-	import { Button, Label } from 'attractions'
+	import {
+		Dialog,
+		FormField,
+		TextField,
+		Button,
+		Modal,
+		Switch,
+		Label,
+	} from 'attractions'
+
+	let contactForm = {
+		show: false,
+		sendEmails: true,
+		email: '',
+		name: '',
+	}
 </script>
 
 <div class="row">
@@ -20,7 +35,25 @@
 		class="linkedin"
 		title="Yonah Aviv on Linkedin"
 		neutral><LinkedinIcon strokeWidth="1.8" /></Button>
+	<Button
+		on:click={() => {
+			contactForm.show = !contactForm.show
+		}}>Contact me</Button>
 </div>
+{#if contactForm.show}
+	<Modal bind:open={contactForm.show} let:closeCallback>
+		<Dialog title="Are you sure you want to exit?" {closeCallback}>
+			<FormField name="Email" help="i.e. example@gmail.com" required>
+				<TextField />
+			</FormField>
+			<FormField
+				name="Send user emails?"
+				errors={[contactForm.sendEmails && 'Do not send emails']}>
+				<Switch bind:value={contactForm.sendEmails} />
+			</FormField>
+		</Dialog>
+	</Modal>
+{/if}
 
 <style lang="scss">
 	@use 'theme.scss';

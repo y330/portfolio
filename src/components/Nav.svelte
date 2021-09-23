@@ -2,7 +2,6 @@
 	// Components
 	import PageTransitions from './PageTransitions.svelte'
 	import Socials from './Socials.svelte'
-
 	// Utils
 	// import ripple from "attractions/utils/ripple";
 	// import objSelector from "../utils/objSelector";
@@ -10,8 +9,9 @@
 	export let items = []
 	export let selected = 1
 
-	const onPin = () => console.log('pin')
+	// const onPin = () => console.log('pin')
 	const handleClick = (tabValue) => () => (selected = tabValue)
+
 </script>
 
 <!-- <Headroom on:pin={onPin} duration="350ms" offset={50} tolerance={5}> -->
@@ -28,7 +28,6 @@
 	</ul>
 	<Socials />
 </header>
-<!-- </Headroom> -->
 {#each items as item}
 	{#if selected == item.value}
 		<PageTransitions>

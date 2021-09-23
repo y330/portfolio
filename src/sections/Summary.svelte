@@ -23,8 +23,6 @@
 			</Card>
 		</div>
 	</div>
-	<!-- <Button round>Contact</Button> -->
-	<!-- <Button ></Button>LinkedinIcon size="20" /></Button> -->
 </section>
 
 <style lang="scss">

@@ -1,10 +1,5 @@
 <script>
 	import {
-		Card,
-		Button,
-		FormField,
-		Switch,
-		TextField,
 		Subhead,
 		Headline,
 	} from 'attractions'
@@ -17,12 +12,7 @@
 		;(name = data.name), (headline = data.headline)
 	})
 
-	let contactForm = {
-		show: false,
-		sendEmails: true,
-		email: '',
-		name: '',
-	}
+
 </script>
 
 <section class="hero">
@@ -42,25 +32,6 @@
 	<br />
 	<br />
 	<br />
-	<Button
-		on:click={() => {
-			contactForm.show = !contactForm.show
-		}}>Contact me</Button>
-	<br />
-	<!-- {#if contactForm.show}
-		<div style="width: 30em">
-			<Card class="contact-form">
-				<FormField name="Email" help="i.e. example@gmail.com" required>
-					<TextField />
-				</FormField>
-				<FormField
-					name="Send user emails?"
-					errors={[contactForm.sendEmails && 'Do not send emails']}>
-					<Switch bind:value={contactForm.sendEmails} />
-				</FormField>
-			</Card>
-		</div>
-	{/if} -->
 </section>
 
 <style lang="scss">

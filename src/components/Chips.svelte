@@ -42,14 +42,14 @@
 		}
 	}
 	export let tags = [];
-	tags = tags.map((str) => ({ label: str, color: assignColorToLanguage(str) }));
+	tags = tags.map((str) => ({ label: str, color: assignColorToLanguage(str)}));
 
 </script>
 
-<ul class="tags mt-10">
+<ul class="tags">
 	{#each tags as tag}
 
-		<li class="tag" style="--color: {tag.color};">
+		<li class="tag" style="--color: {tag.color}">
 			<a href="#">{tag.label}</a>
 		</li>
 	{/each}
