@@ -1,13 +1,16 @@
 <script>
 	// Components
+	import Chips from './../components/Chips.svelte'
 	import { Card, Divider } from 'attractions'
 	import { configStore } from '../../stores/configCopyStore'
 
+	let skills
 	let summary
 
 	configStore.subscribe((data) => {
 		// @ts-ignore
 		summary = data.summary
+		skills = data.skills
 	})
 </script>
 
@@ -22,6 +25,8 @@
 				{summary}
 			</Card>
 		</div>
+		<Divider text="Skills" />
+		<Chips tags={skills} />
 	</div>
 </section>
 

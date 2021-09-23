@@ -1,1 +1,36 @@
-{"name":"Yonah Aviv","headline":"Senior Student at TanenbaumCHAT, Software Developer & Co-founder of Habit Cash, , Coding Tutor","summary":"I am a senior high school student, and I am very passionate about computer science and technology. Specific interests of mine include Machine Learning/Artificial Intelligence and Natural Language Processing, Web Development, Modern Physics, and Mathematics. Aside from being in school, I recently co-founded a startup and I currently work there as a software developer. On the topic of software development, I am also a coding tutor and developer bootcamp instructor for School Simplified. Other hobbies of mine include playing guitar and listening to podcasts.","projects":[{"title":"FragmentQR","description":"Browser extension that allows for the generation of QR codes linking to arbitrary text on a page.","tech":["JavaScript","Chrome APIs","Chrome extension"],"url":"https://bit.ly/FQRInstall","imageUrl":"https://lh3.googleusercontent.com/RunMp0HF3eMndmo8M6fFxiwGRH7yEmafekBuxkStSdxZqSAmp4FVZ9wu4_XoyojJvTJM6VgEy9_Y9lzUKgAXdZJ3eA=w640-h400-e365-rj-sc0x00ffffff"},{"title":"Dystopian Literature Blog","description":"Blog on various dystopian texts for the final summative task in my grade 11 English class","tech":["JavaScript","Svelte","TailwindCSS","Daisy UI","GraphCMS"],"url":"https://yonahs-fst.vercel.app","imageUrl":"https://lh3.googleusercontent.com/RunMp0HF3eMndmo8M6fFxiwGRH7yEmafekBuxkStSdxZqSAmp4FVZ9wu4_XoyojJvTJM6VgEy9_Y9lzUKgAXdZJ3eA=w640-h400-e365-rj-sc0x00ffffff"}],"skills":["Python","JavaScript","Svelte","NodeJS","Java","Flask","TypeScript"]}
+{
+	"name": "Yonah Aviv",
+	"headline": "Senior Student at TanenbaumCHAT, Software Developer & Co-founder of Habit Cash, , Coding Tutor",
+	"summary": "I am a senior high school student, and I am very passionate about computer science and technology. Specific interests of mine include Machine Learning/Artificial Intelligence and Natural Language Processing, Web Development, Modern Physics, and Mathematics. Aside from being in school, I recently co-founded a startup and I currently work there as a software developer. On the topic of software development, I am also a coding tutor and developer bootcamp instructor for School Simplified. Other hobbies of mine include playing guitar and listening to podcasts.",
+	"projects": [
+		{
+			"title": "FragmentQR",
+			"description": "Browser extension that allows for the generation of QR codes linking to arbitrary text on a page.",
+			"tech": ["JavaScript", "Chrome APIs", "Chrome extension"],
+			"url": "https://bit.ly/FQRInstall",
+			"imageUrl": "https://lh3.googleusercontent.com/RunMp0HF3eMndmo8M6fFxiwGRH7yEmafekBuxkStSdxZqSAmp4FVZ9wu4_XoyojJvTJM6VgEy9_Y9lzUKgAXdZJ3eA=w640-h400-e365-rj-sc0x00ffffff"
+		},
+		{
+			"title": "Dystopian Literature Blog",
+			"description": "Blog on various dystopian texts for the final summative task in my grade 11 English class",
+			"tech": [
+				"JavaScript",
+				"Svelte",
+				"TailwindCSS",
+				"Daisy UI",
+				"GraphCMS"
+			],
+			"url": "https://yonahs-fst.vercel.app",
+			"imageUrl": "https://lh3.googleusercontent.com/RunMp0HF3eMndmo8M6fFxiwGRH7yEmafekBuxkStSdxZqSAmp4FVZ9wu4_XoyojJvTJM6VgEy9_Y9lzUKgAXdZJ3eA=w640-h400-e365-rj-sc0x00ffffff"
+		}
+	],
+	"skills": [
+		"Python",
+		"JavaScript",
+		"Svelte",
+		"NodeJS",
+		"Java",
+		"Flask",
+		"TypeScript"
+	]
+}

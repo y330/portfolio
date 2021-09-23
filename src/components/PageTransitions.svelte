@@ -5,6 +5,7 @@
 
 <div
 	in:fly={{ x: -500, duration: 250, delay: 0 }}
-	out:fly={{ x: -500, duration: 250 }}>
+	out:fly={{ x: -500, duration: 250 }}
+>
 	<slot />
 </div>

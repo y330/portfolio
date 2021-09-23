@@ -9,8 +9,7 @@
 	configStore.subscribe((data) => {
 		// @ts-ignore
 		skills = data.skills
-	}
-	)
+	})
 	// convert list to object
 	skills = skills.map((str, index) => ({ value: index + 1, label: str }))
 </script>

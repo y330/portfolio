@@ -1,25 +1,20 @@
 <script>
-
+	import { Divider } from "attractions"
 	// Sections
 
-	import Chips from './../components/Chips.svelte'
 	// import Skills from '../sections/Skills.svelte'
 	import Summary from '../sections/Summary.svelte'
 	// import RecentProjects from "../sections/RecentProjects.svelte";
 	import Hero from '../sections/Hero.svelte'
-	import { configStore } from '/stores/configCopyStore'
-	let skills
-	configStore.subscribe((data) => {
-		let skills = data.skills
-	})
+
 </script>
 
 <container>
 	<Hero />
-	<Summary />
+	<Summary id="summary" />
 	<section class="row">
 		<!-- <RecentProjects /> -->
-		<Chips tags={skills} />
+
 		<!-- <Skills /> -->
 	</section>
 </container>

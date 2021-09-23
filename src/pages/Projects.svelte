@@ -26,7 +26,8 @@
 					url: project.url,
 					imageUrl: project.imageUrl,
 				}}
-				class="module" />
+				class="module"
+			/>
 		{/each}
 	</ResponsiveGrid>
 </section>

@@ -1,26 +1,30 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "fetch-doc": "node ./scripts/fetch-doc.js"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
-    "archieml": "^0.4.2",
-    "attractions": "^3.4.0",
-    "fs": "0.0.1-security",
-    "got": "^11.8.2",
-    "postcss": "^8.3.6",
-    "sass": "^1.41.1",
-    "svelte": "^3.42.6",
-    "svelte-preprocess": "^4.9.4",
-    "vite": "^2.5.10"
-  },
-  "dependencies": {
-    "svelte-feather-icons": "^3.5.0",
-    "@fontsource/inter": "^4.5.0"
-    }
+	"name": "svelte-app",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+		"fetch-doc": "node ./scripts/fetch-doc.js"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
+		"archieml": "^0.4.2",
+		"attractions": "^3.4.0",
+		"fs": "0.0.1-security",
+		"got": "^11.8.2",
+		"postcss": "^8.3.6",
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0",
+		"sass": "^1.41.1",
+		"svelte": "^3.42.6",
+		"svelte-preprocess": "^4.9.4",
+		"vite": "^2.5.10"
+	},
+	"dependencies": {
+		"svelte-feather-icons": "^3.5.0",
+		"@fontsource/inter": "^4.5.0"
+	}
 }

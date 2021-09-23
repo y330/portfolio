@@ -1,9 +1,7 @@
 {
-  "svelteSortOrder": "scripts-options-markup-styles",
-  "singleQuote": true,
-  "semi": false,
-  "tabWidth": 4,
-  "useTabs": true,
-  "svelteBracketNewLine": false,
-  "svelteBracketSpacing": false
+	"svelteSortOrder": "scripts-options-markup-styles",
+	"singleQuote": true,
+	"semi": false,
+	"tabWidth": 4,
+	"useTabs": true
 }

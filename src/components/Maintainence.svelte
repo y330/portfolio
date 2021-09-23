@@ -18,6 +18,7 @@
 			style="z-index: 2;"
 			on:load={showSnackbar({
 				props: { text: 'Site is under contruction!' },
-			})} />
+			})}
+		/>
 	</SnackbarContainer>
 {/if}

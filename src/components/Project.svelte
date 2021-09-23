@@ -6,6 +6,7 @@
 	import { cubicOut } from 'svelte/easing'
 	import Chips from './Chips.svelte'
 	import Typewriter from './Typewriter/Typewriter.svelte'
+	import { H2 } from 'attractions'
 	// ------- parameters
 	export let project = {
 		title: '',
@@ -19,7 +20,7 @@
 	// -------- code
 	const shadow = tweened(0, { duration: 500, easing: cubicOut })
 	const handleClick = () => {
-		window.location = project.link
+		window.location = project.url
 	}
 	const handleMouseEnter = () => {
 		shadow.set(1)
@@ -47,27 +48,26 @@
 		on:mouseleave={handleMouseLeave}
 		on:touchend={handleMouseLeave}
 		transition:slide={{ delay: randomInt(200, 500) }}
-		style="box-shadow: {$shadow * 6}px {$shadow * 3}px #ff3e00, {$shadow *
-			10}px {$shadow * 5}px rgba(255, 85, 0, 0.55), {$shadow *
-			14}px {$shadow * 7}px rgba(255, 100, 0.6, 0.22);
+		style="box-shadow: {$shadow * 8}px {$shadow * 4}px #ff3e00, {$shadow *
+			16}px {$shadow * 8}px rgba(255, 85, 0, 0.55), {$shadow *
+			24}px {$shadow * 12}px rgba(255, 100, 0.6, 0.22);
 ;"
-		class="site dark-mode scroll__ card">
-		<Typewriter interval={100}>
-			<h2 class="title" transition:fade={{ delay: randomInt(250, 500) }}>
+		class="site dark-mode scroll__ card"
+	>
+		<H2 class="title">
+			<Typewriter interval={100}>
 				{project.title}
-			</h2>
-		</Typewriter>
+			</Typewriter>
+		</H2>
 		<div
 			class="description"
-			transition:fade={{ delay: randomInt(250, 1000) }}>
-			<Typewriter interval={1} delay={3000}>
-				{project.description}
-			</Typewriter>
-
-			<img src={project.imageUrl} alt="A screenshot of {project.title}" />
+			transition:fade={{ delay: randomInt(250, 1000) }}
+		>
+			{project.description}
 		</div>
+		<img src={project.imageUrl} alt="A screenshot of {project.title}" />
 		<div class="technologies">
-			<Chips tags={project.technologies} />
+			<Chips tags={project.tech} />
 		</div>
 	</div>
 {/if}
@@ -87,21 +87,25 @@
 		padding-right: 0;
 		min-width: 150px;
 		max-width: 700px;
-		height: 450px;
+		// height: 400px;
 		overflow-y: scroll;
 		position: relative;
 		cursor: pointer;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	.site {
 		&:hover {
+			border-color: theme.$main;
 			color: var(--accent-color);
+			&::-webkit-scrollbar-thumb {
+				background-color: theme.$main;
+			}
 			& .title {
 				/* border: 2px white solid; */
 				color: white;
 
-				background-color: #ff3e0363;
+				background-color: theme.$secondary;
 				a {
 					&::after {
 						content: ' (click to view project)';
@@ -115,22 +119,22 @@
 			}
 		}
 		.title {
-			top: 0;
-			border-radius: 0 0 7px 7px;
+			// top: 0;
+			background-color: theme.$main;
+			border-radius: 7px 0px 0 7px;
 			/* width: 110%; */
-			padding: 1rem;
+			padding: 0;
+			height: fit-content;
 			text-align: center;
-			position: sticky;
-			min-height: 5rem;
-			background-color: transparent;
+			position: relative;
+			max-height: 5rem;
 			font-weight: 400;
 			transition-property: opacity, background-color;
 			transition-duration: 300ms ease-in-out;
-			a {
+			h2 {
 				text-decoration: none;
 				&::after {
 					font-size: small;
-					content: '';
 					transition-duration: 0.5s;
 					text-decoration: none;
 					opacity: 0;
@@ -145,7 +149,8 @@
 	}
 
 	img {
-		/* margin-top: 10rem; */
+		margin-top: 1rem;
+		margin-right: 0.5em;
 		max-height: 70%;
 		max-width: 100%;
 		/* border-right: 20px solid black; */

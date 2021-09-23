@@ -2,53 +2,54 @@
 	const assignColorToLanguage = (language) => {
 		switch (language) {
 			case 'JavaScript':
-				return '#f1e05a';
+				return '#f1e05a'
 			case 'Python':
-				return '#3572A5';
+				return '#3572A5'
 			case 'Java':
-				return '#b07219';
+				return '#b07219'
 			case 'C++':
-				return '#f34b7d';
+				return '#f34b7d'
 			case 'C':
-				return '#f34b7d';
+				return '#f34b7d'
 			case 'Ruby':
-				return '#701516';
+				return '#701516'
 			case 'PHP':
-				return '#4F5D95';
+				return '#4F5D95'
 			case 'Swift':
-				return '#ffac45';
+				return '#ffac45'
 			case 'Go':
-				return '#6aac0f';
+				return '#6aac0f'
 			case 'Kotlin':
-				return '#f18e33';
+				return '#f18e33'
 			case 'Objective-C':
-				return '#438eff';
+				return '#438eff'
 			case 'Svelte':
-				return '#ff5500';
+				return '#ff5500'
 			case 'TypeScript':
-				return '#2b7489';
+				return '#2b7489'
 			case 'Rust':
-				return '#dea584';
+				return '#dea584'
 			case 'HTML':
-				return '#e34c26';
+				return '#e34c26'
 			case 'CSS':
-				return '#563d7c';
+				return '#563d7c'
 			case 'NodeJS':
-				return '#339933';
+				return '#339933'
 			case 'Flask':
-				return '#339933';
+				return '#339933'
 			default:
-				return '#aaa';
+				return '#aaa'
 		}
 	}
-	export let tags = [];
-	tags = tags.map((str) => ({ label: str, color: assignColorToLanguage(str)}));
-
+	export let tags = []
+	tags = tags.map((str) => ({
+		label: str,
+		color: assignColorToLanguage(str),
+	}))
 </script>
 
 <ul class="tags">
 	{#each tags as tag}
-
 		<li class="tag" style="--color: {tag.color}">
 			<a href="#">{tag.label}</a>
 		</li>

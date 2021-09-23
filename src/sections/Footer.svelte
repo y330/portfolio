@@ -1,7 +1,18 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div>
 	<em
 		>This site is a work in progress. Expect several bugs and glitches to
-		occur while viewing.</em>
+		occur while viewing.</em
+	>
 
 	<br />
 
@@ -18,7 +29,7 @@
 		padding-bottom: 0;
 		margin-bottom: 0;
 		margin-top: 5em;
-		height: fit-content;
+		height: 100px;
 		background-color: theme.$main;
 		padding-inline: 4vw;
 		font-family: theme.$font;
