@@ -1,0 +1,18 @@
+@use 'theme.scss';
+
+* {
+	box-sizing: border-box;
+}
+.btn  {
+	color: theme.$secondary !important;
+	background-color: rgba($color: theme.$secondary, $alpha: 0.2) !important;
+	border: solid 4px rgba($color: theme.$secondary, $alpha: 0.2) !important;
+	transition: cubic-bezier(0.6, 0.04, 0.38, 0.335) all 0.15s;
+
+	&:hover {
+		border-color: theme.$main !important;
+	}
+	&:active {
+		transform: scale(0.94);
+	}
+}
