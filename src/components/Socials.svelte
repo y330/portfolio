@@ -23,7 +23,8 @@
 	class="contact-btn"
 	on:click={() => {
 		contactForm.show = !contactForm.show
-	}}>Contact me</Button>
+	}}>Contact me</Button
+>
 
 <div class="row">
 	<Label>@</Label>
@@ -33,14 +34,17 @@
 		title="Yonah Aviv on GitHub"
 		neutral
 		round
-		class="github">
-		<GithubIcon strokeWidth="2" /></Button>
+		class="github"
+	>
+		<GithubIcon size="18" /></Button
+	>
 	<Button
 		href="https://linkedin.com/in/yonahaviv"
 		round
 		class="linkedin"
 		title="Yonah Aviv on Linkedin"
-		neutral><LinkedinIcon strokeWidth="1.8" /></Button>
+		neutral><LinkedinIcon size="18" /></Button
+	>
 </div>
 {#if contactForm.show}
 	<Modal bind:open={contactForm.show} let:closeCallback>
@@ -50,9 +54,12 @@
 			</FormField>
 			<FormField
 				name="Send user emails?"
-				errors={[contactForm.sendEmails && 'Do not send emails']}>
+				errors={[contactForm.sendEmails && 'Do not send emails']}
+			>
 				<Switch bind:value={contactForm.sendEmails} />
 			</FormField>
+
+			<Button on:click={() => contactForm.show = false} filled>Submit</Button>
 		</Dialog>
 	</Modal>
 {/if}
@@ -75,7 +82,7 @@
 			flex-wrap: nowrap;
 			transition: 300ms ease-out;
 			height: 8vh;
-			width: 4vw;
+			width: 5vw;
 
 			border: 0.125em theme.$main solid;
 
@@ -133,7 +140,7 @@
 				margin-bottom: 10px;
 				padding: 10%;
 				margin: 0;
-				width: 4vw;
+				width: 8vw;
 			}
 		}
 		:global(.contact-btn) {

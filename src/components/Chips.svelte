@@ -42,16 +42,17 @@
 		}
 	}
 	export let tags = []
+	export let isSkills = false;
 	tags = tags.map((str) => ({
 		label: str,
 		color: assignColorToLanguage(str),
 	}))
 </script>
 
-<ul class="tags">
+<ul class="tags {isSkills ? "skills" : "tech"}">
 	{#each tags as tag}
-		<li class="tag" style="--color: {tag.color}">
-			<a href="#">{tag.label}</a>
+		<li class="tag" style="--color: {tag.color}; transform: scale({isSkills ? "1" : "0.7"})">
+			<span>{tag.label}</span>
 		</li>
 	{/each}
 </ul>
@@ -64,12 +65,18 @@
 		padding: 0;
 		position: relative;
 		height: auto;
-		list-style-type: none;
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
 		justify-content: baseline;
-		gap: 0.8em;
+		list-style-type: none;
+		width: 100%;
+		gap: 0.4em;
+	}
+	.skills {
+		justify-content: center;
+	}
+	.tech {
+		gap: 0.1em
 	}
 
 	.tag {
@@ -83,7 +90,7 @@
 		transition: background-color 250ms ease, box-shadow 250ms ease;
 	}
 
-	.tag > a {
+	.tag > span {
 		display: inline-block;
 		position: relative;
 		color: var(--light-color);
@@ -92,7 +99,7 @@
 		padding: 0.5rem 1rem 0.5rem 2rem;
 	}
 
-	.tag > a::before {
+	.tag > span::before {
 		content: '';
 		position: absolute;
 		top: 50%;
@@ -108,10 +115,10 @@
 		background-color: var(--color);
 		box-shadow: 0 0 0 calc(2px + 0.25rem) var(--color);
 	}
-	.tag:hover > a {
+	.tag:hover > span {
 		color: var(--dark-color);
 	}
-	.tag:hover > a::before {
+	.tag:hover > span::before {
 		background-color: var(--dark-color);
 	}
 </style>
