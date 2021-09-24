@@ -2,7 +2,7 @@
 	import { Subhead, Headline, Button} from 'attractions'
 	import { configStore } from '/stores/configCopyStore'
 	import Typewriter from '../components/Typewriter/Typewriter.svelte'
-	import { ArrowDownIcon, InfoIcon } from 'svelte-feather-icons'
+	import { ArrowDownIcon } from 'svelte-feather-icons'
 
 	let name
 	let headline

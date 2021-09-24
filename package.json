@@ -1,6 +1,6 @@
 {
-	"name": "yonah-portfolio-site",
-	"version": "1.0.1",
+	"name": "portfolio-site",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
