@@ -13,9 +13,8 @@
 		src="https://onedrive.live.com/embed?cid=D1BCEE1A2FD48DEE&resid=D1BCEE1A2FD48DEE%213115&authkey=AOaKHaMR46vCr84&em=2"
 		height="800"
 		frameborder="0"
-		width="100%"
-		zoom="40"
-		scrolling="yes"
+		width="800"
+		scrolling="no"
 	/>
 </section>
 

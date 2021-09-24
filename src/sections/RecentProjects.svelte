@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   // Component
   import {
     ClockIcon,
@@ -18,6 +18,10 @@
     {
       label: "QuickSum",
       desc: "QUcik summarization tool. <a style='color:lightgray' href='https://github.com/y330/quicksum'>Read more</a> <br><a href='https://quicksum.vercel.app'>Go to project.</a>",
+    },
+    {
+      label: "FragmentQR",
+      desc: "Browser extension that allows for the generation of QR codes linking to arbitrary text on a page. <a style='color:lightgray' href='#'>Read more</a> <br><a href='https://bit.ly/FQRInstall'>Go to project.</a>",
     },
     {
       label: "Sveltekit + TailwindCSS Blog on Dystopian Literature",
@@ -44,7 +48,7 @@
 <section>
   <Divider text="Recent Projects" />
   {#each projects as proj}
-    <div class="accordion-item" class:active={expanded === proj.label}>
+    <div class:active={expanded === proj.label}>
       <button
         style="transition:all 300ms ease; padding: 1em;"
         class:active={expanded === proj.label}
@@ -91,7 +95,6 @@
     width: auto;
     // justify-items: left;
   }
-
   button {
     border-radius: 10px;
     text-align: left;
@@ -109,9 +112,6 @@
     }
     div {
       // flex-grow:20;
-    }
-    :hover {
-      cursor: pointer;
     }
   }
   .active {
@@ -135,4 +135,4 @@
       padding-bottom: 1em;
     }
   }
-</style>
+</style> -->

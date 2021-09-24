@@ -27,7 +27,10 @@
 	</ul>
 	<Socials />
 </header>
-<div class="spacer"></div>
+<br />
+<br />
+<br />
+<br />
 {#each items as item}
 	{#if selected == item.value}
 		<PageTransitions>
@@ -56,13 +59,11 @@
 		justify-content: space-evenly;
 		transition-duration: 500ms;
 		&:hover {
-			background-color: theme.$light-contrast;
+			background-color: #eef;
 			// opacity: 0.6;
 		}
 	}
-	.spacer {
-		height: 10rem;
-	}
+
 	.box {
 		padding: 0;
 		padding-top: 2rem;
@@ -104,10 +105,11 @@
 		border: 1px solid transparent;
 		transition: border-color 0.2s ease-in;
 		&:hover {
-			// border-color: theme.$light-contrast;
+			border-color: theme.$light-contrast;
 		}
 
 		li {
+			flex-grow: 1;
 			text-align: center;
 			align-self: center;
 			span {
@@ -137,57 +139,29 @@
 				background-color: #e9ecef;
 			}
 		}
-	}
-	@media only screen and (max-width: 700px) {
-		ul {
-			:first-child {
-				span {
-					border-right-width: 2px;
-				}
-				&:active > span {
-					border-width: 2px;
-				}
+		:first-child {
+			span {
+				border-bottom-right-radius: 0em;
+				border-right-width: 0;
+				border-top-right-radius: 0em;
 			}
-
-			:last-child {
-				span {
-					border-left-width: 2px;
-				}
-				&:active > span {
-					border-width: 2px;
-				}
+			&:active > span {
+				border-width: 2px;
 			}
 		}
-	}
-	@media only screen and (min-width: 700px) {
-		ul {
-			:first-child {
-				span {
-					border-bottom-right-radius: 0em;
-					border-right-width: 0;
-					border-top-right-radius: 0em;
-				}
-				&:active > span {
-					border-width: 2px;
-				}
-			}
 
-			:nth-child(2) span {
-				border-radius: 0;
-			}
-			:last-child {
-				span {
-					border-bottom-left-radius: 0em;
-					border-top-left-radius: 0em;
-					border-left-width: 0;
-				}
-				&:active > span {
-					border-width: 2px;
-				}
-			}
+		:nth-child(2) span {
+			border-radius: 0;
 		}
-		.spacer {
-			height: 4em;
+		:last-child {
+			span {
+				border-bottom-left-radius: 0em;
+				border-top-left-radius: 0em;
+				border-left-width: 0;
+			}
+			&:active > span {
+				border-width: 2px;
+			}
 		}
 	}
 

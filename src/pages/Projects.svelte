@@ -12,11 +12,9 @@
 	})
 </script>
 
-<div class="title">
-	<Typewriter interval={100} cursor="#ff3e00">
-		<H1>Projects</H1>
-	</Typewriter>
-</div>
+<Typewriter interval={100} cursor="#ff3e00">
+	<H1>Projects</H1>
+</Typewriter>
 <section>
 	<ResponsiveGrid>
 		{#each projects as project}
@@ -33,9 +31,3 @@
 		{/each}
 	</ResponsiveGrid>
 </section>
-
-<style>
-	.title {
-		/* padding-top1: 8rem; */
-	}
-</style>

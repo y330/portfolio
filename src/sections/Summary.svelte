@@ -26,7 +26,7 @@
 			</Card>
 		</div>
 		<Divider text="Skills" />
-		<Chips tags={skills}  isSkills={true}/>
+		<Chips tags={skills} />
 	</div>
 </section>
 

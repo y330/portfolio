@@ -4,7 +4,7 @@
 
 	// import Skills from '../sections/Skills.svelte'
 	import Summary from '../sections/Summary.svelte'
-	import RecentProjects from "../sections/RecentProjects.svelte";
+	// import RecentProjects from "../sections/RecentProjects.svelte";
 	import Hero from '../sections/Hero.svelte'
 
 </script>
@@ -13,7 +13,7 @@
 	<Hero />
 	<Summary id="summary" />
 	<section class="row">
-		<RecentProjects />
+		<!-- <RecentProjects /> -->
 
 		<!-- <Skills /> -->
 	</section>
