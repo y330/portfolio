@@ -6,7 +6,7 @@
 	import { cubicOut } from 'svelte/easing'
 	import Chips from './Chips.svelte'
 	import Typewriter from './Typewriter/Typewriter.svelte'
-	import { H2 } from 'attractions'
+	import { H2, Label } from 'attractions'
 	// ------- parameters
 	export let project = {
 		title: '',
@@ -67,6 +67,7 @@
 		</div>
 		<img src={project.imageUrl} alt="A screenshot of {project.title}" />
 		<div class="technologies">
+			<Label>Technologies used: </Label>
 			<Chips tags={project.tech} />
 		</div>
 	</div>

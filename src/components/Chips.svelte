@@ -42,22 +42,27 @@
 		}
 	}
 	export let tags = []
-	export let isSkills = false;
+	export let isSkills = false
 	tags = tags.map((str) => ({
 		label: str,
 		color: assignColorToLanguage(str),
 	}))
 </script>
 
-<ul class="tags {isSkills ? "skills" : "tech"}">
+<ul class="tags {isSkills ? 'skills' : 'tech'} card scroll__ dark-mode">
 	{#each tags as tag}
-		<li class="tag" style="--color: {tag.color}; transform: scale({isSkills ? "1" : "0.7"})">
+		<li
+			class="tag"
+			style="--color: {tag.color}; transform: scale({isSkills
+				? '1'
+				: '0.7'})"
+		>
 			<span>{tag.label}</span>
 		</li>
 	{/each}
 </ul>
 
-<style>
+<style lang="scss">
 	.tags {
 		--light-color: rgb(34, 45, 55);
 		--dark-color: rgb(240, 250, 250);
@@ -67,16 +72,24 @@
 		height: auto;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: baseline;
+		// justify-content: baseline;
 		list-style-type: none;
 		width: 100%;
-		gap: 0.4em;
+		/* gap: 0.4em; */
 	}
 	.skills {
 		justify-content: center;
+		gap: 0.8em;
 	}
 	.tech {
-		gap: 0.1em
+
+		justify-content: left;
+		flex-wrap: wrap;
+		gap: 0px;
+		li {
+			flex-grow: 0;
+			margin-inline: -0.8em;
+		}
 	}
 
 	.tag {
