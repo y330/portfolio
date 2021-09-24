@@ -1,16 +1,14 @@
-import fs from 'fs'
-import archieml from 'archieml'
-import fetch from 'node-fetch'
+import fs from "fs"
+import archieml from "archieml"
+import fetch from "node-fetch"
 import google from '../config.js'
 const docs = google.docs
 
 const fetchGoogle = async ({ id, gid }) => {
 	console.log(`fetching...${id}`)
 
-	const base = 'https://docs.google.com'
-	const post = gid
-		? `spreadsheets/u/1/d/${id}/export?format=csv&id=${id}&gid=${gid}`
-		: `document/d/${id}/export?format=txt`
+	const base = "https://docs.google.com"
+	const post = gid ? `spreadsheets/u/1/d/${id}/export?format=csv&id=${id}&gid=${gid}` : `document/d/${id}/export?format=txt`
 	const url = `${base}/${post}`
 
 	try {
@@ -22,12 +20,13 @@ const fetchGoogle = async ({ id, gid }) => {
 		const parsed = archieml.load(text)
 		const str = JSON.stringify(parsed)
 		return str
+
 	} catch (err) {
 		throw new Error(err)
 	}
-}
+};
 
-;(async () => {
+(async () => {
 	for (let d of docs) {
 		try {
 			const str = await fetchGoogle(d)
